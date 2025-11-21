@@ -1,0 +1,184 @@
+@import 'ng-zorro-antd/ng-zorro-antd.min.css';
+
+:root {
+  --primary-navy: #0A2463;
+  --secondary-navy: #1E3A8A;
+  --light-navy: #3B5998;
+  --accent-orange: #FB8500;
+  --light-orange: #FFB703;
+  --white: #FFFFFF;
+  --light-gray: #F5F5F5;
+  --medium-gray: #E0E0E0;
+  --dark-gray: #757575;
+  --success: #52C41A;
+  --error: #FF4D4F;
+  --warning: #FAAD14;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--light-gray);
+  color: #333;
+  line-height: 1.6;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Global main content defaults — individual layout component will control spacing */
+.main-content {
+  flex: 1 1 auto;
+  background-color: var(--light-gray);
+  padding: 24px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-navy);
+}
+
+.btn-primary {
+  background-color: var(--primary-navy);
+  border-color: var(--primary-navy);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-navy);
+  border-color: var(--secondary-navy);
+}
+
+.btn-accent {
+  background-color: var(--accent-orange);
+  border-color: var(--accent-orange);
+  color: var(--white);
+}
+
+.btn-accent:hover {
+  background-color: var(--light-orange);
+  border-color: var(--light-orange);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%);
+  color: var(--white);
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(10, 36, 99, 0.2);
+}
+
+.stat-card.orange {
+  background: linear-gradient(135deg, var(--accent-orange) 0%, var(--light-orange) 100%);
+}
+
+.stat-card-value {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.stat-card-label {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 50%, var(--accent-orange) 100%);
+}
+
+.login-card {
+  background: var(--white);
+  padding: 48px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin-bottom: 8px;
+}
+
+.login-subtitle {
+  color: var(--dark-gray);
+  font-size: 14px;
+}
+
+.ant-table-thead > tr > th {
+  background-color: var(--primary-navy);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background-color: rgba(10, 36, 99, 0.05);
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-active,
+.status-completed {
+  background-color: rgba(82, 196, 26, 0.1);
+  color: var(--success);
+}
+
+.status-pending {
+  background-color: rgba(250, 173, 20, 0.1);
+  color: var(--warning);
+}
+
+.status-inactive,
+.status-failed {
+  background-color: rgba(255, 77, 79, 0.1);
+  color: var(--error);
+}
