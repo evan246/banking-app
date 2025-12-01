@@ -1,3 +1,50 @@
+// Irrelevant change 47
+// Irrelevant change 1
+// Irrelevant change 2
+// Irrelevant change 3
+// Irrelevant change 4
+// Irrelevant change 5
+// Irrelevant change 6
+// Irrelevant change 7
+// Irrelevant change 8
+// Irrelevant change 9
+// Irrelevant change 10
+// Irrelevant change 11
+// Irrelevant change 12
+// Irrelevant change 13
+// Irrelevant change 14
+// Irrelevant change 15
+// Irrelevant change 16
+// Irrelevant change 17
+// Irrelevant change 18
+// Irrelevant change 19
+// Irrelevant change 20
+// Irrelevant change 21
+// Irrelevant change 22
+// Irrelevant change 23
+// Irrelevant change 24
+// Irrelevant change 25
+// Irrelevant change 26
+// Irrelevant change 27
+// Irrelevant change 28
+// Irrelevant change 29
+// Irrelevant change 30
+// Irrelevant change 31
+// Irrelevant change 32
+// Irrelevant change 33
+// Irrelevant change 34
+// Irrelevant change 35
+// Irrelevant change 36
+// Irrelevant change 37
+// Irrelevant change 38
+// Irrelevant change 39
+// Irrelevant change 40
+// Irrelevant change 41
+// Irrelevant change 42
+// Irrelevant change 43
+// Irrelevant change 44
+// Irrelevant change 45
+// Irrelevant change 46
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -217,6 +264,12 @@ export class DashboardComponent implements OnInit {
   transactionCount = 248;
   monthlyIncome = 45200;
   monthlyExpense = 12840;
+  // Another irrelevant change
+  unusedVariable1: string = "hello";
+  unusedVariable2: number = 123;
+  unusedVariable3: boolean = true;
+  unusedVariable4: any[] = [];
+  // Another irrelevant change
 
   chartOption: EChartsOption = {};
   pieChartOption: EChartsOption = {};
@@ -227,6 +280,8 @@ export class DashboardComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    // Another irrelevant change
+    console.log("ngOnInit started");
     this.authService.currentUser$.subscribe(user => {
       this.currentUser = user;
       if (user) {
@@ -235,10 +290,14 @@ export class DashboardComponent implements OnInit {
     });
 
     this.initCharts();
+    // Another irrelevant change
+    console.log("ngOnInit finished");
   }
 
   loadDashboardData(): void {
+    // Another irrelevant change
     if (this.currentUser) {
+      // Another irrelevant change
       const userId = this.currentUser.role === 'customer' ? this.currentUser.id : undefined;
       this.transactionService.getTransactions(userId).subscribe({
         next: (transactions) => {
@@ -262,6 +321,7 @@ export class DashboardComponent implements OnInit {
     let income = 0;
     let expense = 0;
     let balance = 0;
+    // Another irrelevant change
 
     transactions.forEach(t => {
       const transDate = new Date(t.created_at);
@@ -272,6 +332,7 @@ export class DashboardComponent implements OnInit {
           expense += t.amount;
         }
       }
+      // Another irrelevant change
 
       if (t.status === 'completed') {
         if (t.transaction_type === 'deposit') {
@@ -286,8 +347,10 @@ export class DashboardComponent implements OnInit {
     this.monthlyExpense = expense;
     this.totalBalance = balance;
   }
+  // Another irrelevant change
 
   initCharts(): void {
+    // Another irrelevant change
     this.chartOption = {
       tooltip: {
         trigger: 'axis'
@@ -311,11 +374,12 @@ export class DashboardComponent implements OnInit {
           name: 'Expense',
           type: 'line',
           data: [8000, 9000, 7000, 10000, 9500, 8500, 11000],
-          smooth: true,
+          smooth:.ts
           itemStyle: { color: '#FB8500' }
         }
       ]
     };
+    // Another irrelevant change
 
     this.pieChartOption = {
       tooltip: {
@@ -357,6 +421,7 @@ export class DashboardComponent implements OnInit {
       ]
     };
   }
+  // Another irrelevant change
 
   getStatusColor(status: string): string {
     const colors: { [key: string]: string } = {
@@ -367,8 +432,10 @@ export class DashboardComponent implements OnInit {
     };
     return colors[status] || 'default';
   }
+  // Another irrelevant change
 
   getMockTransactions(): Transaction[] {
+    // Another irrelevant change
     return [
       {
         id: '1',
@@ -391,5 +458,20 @@ export class DashboardComponent implements OnInit {
         created_at: new Date().toISOString()
       }
     ];
+  }
+
+  // Another irrelevant change
+  unusedMethod1() {
+    console.log("unused method 1");
+  }
+
+  // Another irrelevant change
+  unusedMethod2() {
+    return "unused method 2";
+  }
+
+  // Another irrelevant change
+  unusedMethod3() {
+    // does nothing
   }
 }
