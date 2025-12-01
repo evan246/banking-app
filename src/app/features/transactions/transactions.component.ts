@@ -1,4 +1,5 @@
 // Trivial change for git commit
+// Another trivial change
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
